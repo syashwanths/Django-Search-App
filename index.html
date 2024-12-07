@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Search App</title>
+</head>
+<body>
+    <h1>Search Items</h1>
+    <form method="get" class="search-container" action="{% url 'search' %}">
+        {% csrf_token %}
+        <input type="text" name="q" placeholder="Search by name or description...." value="{{ request.GET.query }}">
+        <button type="submit">Search</button>
+    </form>
+    {% if query %}
+        {% if results %}
+            <h2>Results:</h2>
+            <ul>
+                {% for item in results %}
+                    <li><a href="/item/{{ item.id }}">{{ item.name }}</a></li>
+                {% endfor %}
+            </ul>
+        {% else %}
+        {% if no_results %}
+            <p class="no_result_message">Sorry, no results found. Please try another search 😞.</p>
+        {% endif %}
+        {% endif %}
+    {% else %}
+            <p>Please enter a search query to see results.</p>
+    {% endif %}
+</body>
+</html>

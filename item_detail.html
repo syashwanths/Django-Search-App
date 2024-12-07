@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 36px;
+            color: #007bff;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #d1d1d1;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 30px;
+            font-size: 16px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsive Styling */
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            a {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    {% csrf_token %}
+    <h1>{{ item.name }}</h1>
+    <p>{{ item.description }}</p>
+    <a href="{% url 'search' %}">Back to Search</a>
+</body>
+</html>
