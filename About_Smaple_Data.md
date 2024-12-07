@@ -32,31 +32,44 @@ These data entries represent various courses, each with a unique name and detail
 
 **Step 1 : Ensure the Item Model is Migrated**
 Before adding data, ensure the database reflects your model structure. Run the following commands:
-      **python manage.py makemigrations
-      python manage.py migrate**
+
+      **python manage.py makemigrations**
+      
+      **python manage.py migrate**
 This creates and applies the necessary database migrations for the Item model.
 
 **Step 2 : Start the Django Development Server**
+
 Run the following command in your project directory:
+
     **python manage.py runserver**
+    
 Open your web browser and navigate to the admin panel at http://127.0.0.1:8000/admin/.
 
 **Step 3 : Log in to the Admin Panel**
+
 Use the admin username and password you created during the superuser setup.
 
 **Step 4 : Access the Item Model in Admin**
+
 Locate your app section (e.g., Search App) in the admin panel.
 Click on the Item model to manage the entries.
 
 **Step 5 : Add a New Item**
+
 Click the Add Item button.
 Fill out the fields for Name and Description using the sample data provided.
+
 **Example Entry:**
+
 Name: Python Programming
+
 Description: A comprehensive course designed to teach the basics of Python programming.
+
 Click Save to add the item.
 
 **Step 6 : Repeat for All Sample Data Entries**
 
 **Step 7 : Verify the Data**
+
 Once all entries are added, visit the application's search page. Test the search functionality to ensure the data displays and filters correctly.
