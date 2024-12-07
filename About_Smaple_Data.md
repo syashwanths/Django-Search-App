@@ -3,18 +3,23 @@ The project includes the following sample data to demonstrate and test the funct
 These data entries represent various courses, each with a unique name and detailed description, providing a realistic dataset for testing search and filtering features.
 
 1. **name** : Python Programming
+
 **Description**: A comprehensive course designed to teach the basics of Python programming. This entry helps test queries related to general programming topics.
 
 2. **name** : Django Web Development
+
 **Description**: A detailed course on building web applications using the Django framework. Useful for testing searches related to web development.
 
 3. **name** : Frontend Development
+   
 **Description**: An introductory course covering HTML, CSS, and JavaScript, focused on creating visually appealing and responsive websites. This entry is ideal for testing searches involving UI/UX and frontend-related keywords.
 
 4. **name** : Data Science with Python
+
 **Description**: A beginner's guide to data science, featuring Python libraries like Pandas and NumPy for data manipulation and analysis. Helps in testing searches related to data analysis and science.
 
 5. **name** : Machine Learning Basics
+
 **Description**: A fundamental course on machine learning, covering core algorithms and their applications. This entry ensures the search functionality works for AI and ML-related queries.
 
 **Purpose of Sample Data**
@@ -22,7 +27,9 @@ These data entries represent various courses, each with a unique name and detail
 **Testing Versatility**: Covers a range of topics to test partial and full-text search capabilities.
 **Error Handling**: Allows for robust testing of the application's behavior when no results are found.
 
+
 **Steps to Add Sample Data Through Django Admin Panel**
+
 **Step 1 : Ensure the Item Model is Migrated**
 Before adding data, ensure the database reflects your model structure. Run the following commands:
       **python manage.py makemigrations
