@@ -33,16 +33,16 @@ These data entries represent various courses, each with a unique name and detail
 **Step 1 : Ensure the Item Model is Migrated**
 Before adding data, ensure the database reflects your model structure. Run the following commands:
 
-      **python manage.py makemigrations**
+      python manage.py makemigrations
       
-      **python manage.py migrate**
+      python manage.py migrate
 This creates and applies the necessary database migrations for the Item model.
 
 **Step 2 : Start the Django Development Server**
 
 Run the following command in your project directory:
 
-    **python manage.py runserver**
+    python manage.py runserver
     
 Open your web browser and navigate to the admin panel at http://127.0.0.1:8000/admin/.
 
